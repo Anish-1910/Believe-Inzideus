@@ -16,7 +16,7 @@
     <nav>
       <a href="index.html">Home</a>
 <div class="dropdown">
-  <a href="#">Products</a>
+  <a href="#" class="dropdown-toggle">Products</a>
   <div class="dropdown-content">
     <a href="groceries.html">Groceries</a>
     <a href="snacks.html">Snacks</a>
@@ -123,5 +123,25 @@
 </div>
     <p class="copyright">&copy; 2025 Believe Inzideus. All rights reserved.</p>
   </footer>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const dropdownToggle = document.querySelector(".dropdown-toggle");
+    const dropdownContent = document.querySelector(".dropdown-content");
+
+    dropdownToggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      dropdownContent.classList.toggle("show-dropdown");
+    });
+
+    // Optional: Close dropdown if clicked outside
+    window.addEventListener("click", function (e) {
+      if (!e.target.matches('.dropdown-toggle')) {
+        dropdownContent.classList.remove("show-dropdown");
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
