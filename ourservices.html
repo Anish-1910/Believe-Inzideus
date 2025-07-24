@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services | Believe Inzideus</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="x-icon" href="favicon.ico" type="image/x-icon" style="border-radius: 50%;">
+  <link rel="stylesheet" href="index.css" />
+  <style>
+    .services-section {
+      padding: 40px 20px;
+      background: #f9f9f9;
+      text-align: center;
+    }
+
+    .services-section h1 {
+      font-size: 2.5rem;
+      color: #1a202c;
+      margin-bottom: 10px;
+    }
+
+    .services-section p.subtitle {
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    .service-card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      text-align: left;
+      transition: transform 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .service-card h2 {
+      font-size: 1.4rem;
+      color: #1a202c;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 600px) {
+      .services-section h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="logo.jpg" alt="Logo" />
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <a href="#" class="dropdown-toggle">Products</a>
+        <div class="dropdown-content">
+          <a href="groceries.html">Groceries</a>
+          <a href="snacks.html">Snacks</a>
+          <a href="millets.html">Millets</a>
+        </div>
+      </div>
+      <a href="ourservices.html">Our services</a>
+    </nav>
+    <div class="search-cart">
+      <div class="cart-icon">
+        <a href="cart.html"><img src="cart.png" alt="Cart" /></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services Section -->
+  <section class="services-section">
+    <h1>Our Services</h1>
+    <p class="subtitle">Empowering lives with care, education & wellness</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="acupuncture.png" alt="Acupuncture Service">
+        <h2>Acupuncture Therapy</h2>
+        <p>Experience natural healing through certified acupuncture therapy. Improve energy balance, relieve pain, and enhance overall wellness.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="beauty.png" alt="Beautician Classes">
+        <h2>Beautician Classes</h2>
+        <p>Join our professional beautician training program. Learn skincare, makeup, hair styling, and salon techniques from industry experts.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="coaching.png" alt="NEET & JEE Coaching">
+        <h2>NEET & JEE Coaching</h2>
+        <p>Top-quality coaching for competitive exams with expert faculty, study materials, and regular assessments for student success.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="counseling.png" alt="Psychological Counseling">
+        <h2>Psychological Counseling</h2>
+        <p>Support your mental health with confidential counseling sessions for anxiety, stress, depression, and emotional wellbeing.</p>
+      </div>
+    </div>
+  </section>
+
+  <br><br>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-connect">
+      <h3>CONNECT WITH US</h3>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/believe_inzideus/?utm_source=ig_web_button_share_sheet" target="_blank"><img src="insta.png" alt="Instagram"></a>
+        <a href="https://facebook.com" target="_blank"><img src="facebook.png" alt="Facebook"></a>
+        <a href="https://twitter.com" target="_blank"><img src="x.png" alt="Twitter"></a>
+        <a href="https://wa.me/8248221144" target="_blank"><img src="whatsapp.png" alt="WhatsApp"></a>
+        <a href="https://telegram.org" target="_blank"><img src="telegram-icon.jpeg" alt="Telegram"></a>
+      </div>
+      <p>If you have any complaints or suggestions, you may <a href="mailto:support@believeinzideus.com">write to us</a>.</p>
+    </div>
+    <p class="copyright">&copy; 2025 Believe Inzideus. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const dropdownToggle = document.querySelector(".dropdown-toggle");
+      const dropdownContent = document.querySelector(".dropdown-content");
+
+      dropdownToggle.addEventListener("click", function (e) {
+        e.preventDefault();
+        dropdownContent.classList.toggle("show-dropdown");
+      });
+
+      window.addEventListener("click", function (e) {
+        if (!e.target.matches('.dropdown-toggle')) {
+          dropdownContent.classList.remove("show-dropdown");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
