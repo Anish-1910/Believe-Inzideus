@@ -361,3 +361,23 @@ nav a {
   font-size: 14px;
   color: #161616;
 }
+
+
+@media (max-width: 768px) {
+  .product-card {
+    aspect-ratio: 1 / 1; /* Makes it square */
+    max-width: calc(50% - 20px); /* Keep your existing layout */
+    height: auto; /* Let height adjust automatically via aspect ratio */
+  }
+
+  .product-card img {
+    height: 50%; /* Adjust image height to fit inside square */
+    object-fit: cover;
+  }
+
+  .product-card h2,
+  .product-card p,
+  .add-to-cart {
+    font-size: 0.85rem;
+  }
+}
