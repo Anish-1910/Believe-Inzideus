@@ -16,7 +16,7 @@
 <nav>
   <a href="index.html">Home</a>
   <div class="dropdown">
-    <a href="#">Products</a>
+    <a href="#" class="dropdown-toggle">Products</a>
     <div class="dropdown-content">
       <a href="groceries.html">Groceries</a>
       <a href="snacks.html">Snacks</a>
@@ -77,5 +77,15 @@
     </div>
     <p class="copyright">&copy; 2025 Believe Inzideus. All rights reserved.</p>
   </footer>
+  <script>
+  document.querySelectorAll('.dropdown-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const dropdown = button.parentElement;
+      const content = dropdown.querySelector('.dropdown-content');
+      content.classList.toggle('show-dropdown');
+    });
+  });
+</script>
+
 </body>
 </html>
