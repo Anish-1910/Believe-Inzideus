@@ -110,6 +110,9 @@ nav a {
 }
 
 /* Main Content */
+.main-content {
+  padding-bottom: 120px; /* Add extra bottom padding */
+}
 .main-content h1 {
   text-align: center;
   font-size: 1.5rem;
@@ -152,6 +155,7 @@ nav a {
   flex-direction: column;
   justify-content: space-between;
   aspect-ratio: 1 / 1;
+  overflow: hidden;
 }
 
 .product-card img {
@@ -204,9 +208,12 @@ nav a {
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-bottom: 15px;
+  gap: 12px;
+  margin-bottom: 10px;
+  flex-wrap: wrap; /* ensures items don’t overflow */
+  overflow: hidden; /* hide anything that might break out */
 }
+
 
 .social-icons a {
   width: 35px;
@@ -221,6 +228,7 @@ nav a {
 .social-icons img {
   width: 20px;
   height: 20px;
+  object-fit: contain;
 }
 
 .footer-connect a {
