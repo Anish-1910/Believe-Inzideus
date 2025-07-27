@@ -72,5 +72,26 @@
     </div>
     <p class="copyright">&copy; 2025 Believe Inzideus. All rights reserved.</p>
   </footer>
+<script>
+  document.querySelectorAll('.add-to-cart').forEach((btn, i) => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.product-card');
+      const name = card.querySelector('h2').innerText;
+      const price = parseInt(card.querySelector('p').innerText.replace('Rs. ', ''));
+      const image = card.querySelector('img').getAttribute('src');
+
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const index = cart.findIndex(p => p.name === name);
+      if (index !== -1) {
+        cart[index].quantity += 1;
+      } else {
+        cart.push({ name, price, image, quantity: 1 });
+      }
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert(`${name} added to cart`);
+    });
+  });
+</script>
+
 </body>
 </html>
