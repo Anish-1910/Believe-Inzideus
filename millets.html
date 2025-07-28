@@ -73,7 +73,16 @@
     <p class="copyright">&copy; 2025 Believe Inzideus. All rights reserved.</p>
   </footer>
 <script>
-  document.querySelectorAll('.add-to-cart').forEach((btn, i) => {
+  function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.innerText = message;
+    toast.classList.add('show');
+    setTimeout(() => {
+      toast.classList.remove('show');
+    }, 2000);
+  }
+
+  document.querySelectorAll('.add-to-cart').forEach((btn) => {
     btn.addEventListener('click', () => {
       const card = btn.closest('.product-card');
       const name = card.querySelector('h2').innerText;
@@ -88,10 +97,12 @@
         cart.push({ name, price, image, quantity: 1 });
       }
       localStorage.setItem('cart', JSON.stringify(cart));
-      alert(`${name} added to cart`);
+      showToast(`${name} added to cart`);
     });
   });
 </script>
 
+
+  <div id="toast" class="toast">Item added to cart</div>
 </body>
 </html>
