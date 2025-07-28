@@ -289,6 +289,22 @@ nav a {
     width: 25px;
     height: 25px;
   }
+    .main-content h1 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 50px;
+  }
+  .top-selling h1 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  .our-story h2 {
+    font-size: 25px;
+    margin-bottom: 40px;
+    color: #222;
+  }
+
 
   .product-card {
     flex: 1 1 calc(50% - 20px);
